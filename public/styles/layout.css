@@ -22,6 +22,19 @@ html {
   }
   #title {font-family: 'Bungee', cursive;};
 
+ .container {
+   width: 90%;
+   text-align: center;
+   top: 520px;
+   margin-left: 5%;
+   margin-right: 5%;
+   position: relative;
+  }
+
+  .words{
+    z-index: 3000;
+    color: black;
+  }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
