@@ -13,6 +13,12 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
+    <!-- Implement nav bar -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- Implement header -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -22,10 +28,19 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter bbbbbsrjroigjwroigjwrogijbb</span>
+    <nav class="flex-container">
+      <span id = "title">tweeter</span>
+      <span><b>Write</b> a tweet</span>
     </nav>
-
+    <header>
+        <div>
+            <img src="/images/profile-hex.png">
+        </div>
+        <br>
+        <div>
+          <h2>Your Name</h2>
+        </div>
+      </header>
     <!-- Page-specific (main) content here -->
     <main class="container"></main>
   </body>
