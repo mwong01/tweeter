@@ -1,0 +1,17 @@
+header {
+  color: #FFFFFF;
+  background-color: #d4c900;
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+  height: 400px;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: auto;
+ }
+ .nav {
+  position: absolute;
+ }
+
+ #title {font-family: 'Bungee', cursive;};
+ #newtweet {font-family: 'Source Sans Pro', sans-serif;};
