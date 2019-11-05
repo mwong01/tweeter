@@ -15,12 +15,12 @@
 
     <!-- Implement nav bar -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
-    <!-- Implement new tweet -->
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />    
-
+    
     <!-- Implement header -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    
+    <!-- Implement new tweet -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />    
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -35,13 +35,17 @@
       <span id = "title">tweeter</span>
       <span><b>Write</b> a tweet</span>
     </nav>
-    <header>
+    <header style = "padding-bottom: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 5%;">
         <div>
             <img src="/images/profile-hex.png">
         </div>
         <br>
         <div>
-          <h2>Your Name</h2>
+          <h2 style = "margin-bottom: 0px;
+          margin-top: 0px">Matt Wong</h2>
         </div>
       </header>
     <!-- Page-specific (main) content here -->
@@ -49,24 +53,15 @@
 
       <!-- create the form for new tweets -->
         <section class="new-tweet">
-            <h2>Compose Tweet</h2>
+            <h2 class="composeTweet">Compose Tweet</h2>
             <form method="POST" action="/tweets/">
-              <textarea name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
-              <span class="counter">140</span>
+              <textarea class="tweetbox" name="text" placeholder="What are you humming about?"></textarea>
+              <div>
+                <input type="submit" value="Tweet" class="tweetButton">
+                <span class="counter">140</span>
+              </div>
             </form>
           </section>
-          
-      <!-- <h1>
-        hello
-      </h1>
-      <h2>
-        Lorum Ipsum
-      </h2>
-      <p class="words">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      </p> -->
-
     </main>
   </body>
 </html>

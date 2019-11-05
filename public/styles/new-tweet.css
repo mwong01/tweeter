@@ -1,0 +1,41 @@
+.new-tweet {
+  text-align: center;
+  margin: 0 auto 40px;
+  position: relative;
+  width: 90%;
+}
+
+.new-tweet form > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* compose tweet title */
+.composeTweet {
+  text-align: left;
+  position: relative;
+  border-style: none none solid none;
+}
+
+/* text box to enter the tweet */
+.tweetbox {
+  text-align: left;
+  margin: 0 auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bolder;
+  background-color: #f4f1ec;
+  width: 100%;
+  border: none;
+  padding: 0 0 0 0;
+}
+
+.tweetButton {
+  font-family: 'Bungee', cursive;
+  color: #FFFFFF;
+  background-color: #4056A1;
+}
+
+.counter {
+  text-align: right;
+  font-family: 'Bungee', cursive;
+}
