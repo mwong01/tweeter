@@ -12,6 +12,8 @@ $(document).ready(function() {
     // make counter red when tweet > 140 chars
     if ($charRemain < 0) {
       $counter.addClass("overtweeted");
+    } else {
+      $counter.removeClass("overtweeted");
     }
   });
 });
