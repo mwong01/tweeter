@@ -46,3 +46,7 @@
 .counter {
   font-family: 'Bungee', cursive;
 }
+
+.overtweeted {
+  color: red;
+}
