@@ -14,7 +14,9 @@
 .composeTweet {
   text-align: left;
   position: relative;
-  border-style: none none solid none;
+  border-style: none;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 /* text box to enter the tweet */
@@ -26,7 +28,12 @@
   background-color: #f4f1ec;
   color: #545149;
   width: 100%;
-  border: none;
+  border-bottom: solid;
+  border-color: #545149;
+  border-bottom-width: 3px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   padding: 0 0 0 0;
 }
 

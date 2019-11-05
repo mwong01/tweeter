@@ -8,3 +8,9 @@ header {
   text-align: center;
   position: relative;
  }
+
+ .myName {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: #545149;
+ }

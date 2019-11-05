@@ -35,17 +35,13 @@
       <span id = "title">tweeter</span>
       <span><b>Write</b> a tweet</span>
     </nav>
-    <header style = "padding-bottom: 5%;
-    padding-left: 5%;
-    padding-top: 5%;
-    padding-right: 5%;">
+    <header>
         <div>
             <img src="/images/profile-hex.png">
         </div>
         <br>
         <div>
-          <h2 style = "margin-bottom: 0px;
-          margin-top: 0px">Matt Wong</h2>
+          <h2 class="myName">Matt Wong</h2>
         </div>
       </header>
     <!-- Page-specific (main) content here -->
@@ -53,7 +49,7 @@
 
       <!-- create the form for new tweets -->
         <section class="new-tweet">
-            <h2 class="composeTweet">Compose Tweet</h2>
+            <h2 class="composeTweet">Compose Tweet:</h2>
             <form method="POST" action="/tweets/">
               <textarea class="tweetbox" name="text" placeholder="What are you humming about?"></textarea>
               <div>
