@@ -1,67 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- External Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- External Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
+    rel="stylesheet">
 
-    <!-- Implement nav bar -->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    
-    <!-- Implement header -->
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    
-    <!-- Implement new tweet -->
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />    
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <!-- Implement nav bar -->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+  <!-- Implement header -->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-    <!-- jQuery -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    
-  </head>
+  <!-- Implement new tweet -->
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav class="flex-container">
-      <span id = "title">tweeter</span>
-      <span><b>Write</b> a tweet</span>
-    </nav>
-    <header>
+  <!-- Implement tweet body -->
+  <link rel="stylesheet" href="/styles/tweets-container.css" type="text/css" />
+
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav class="flex-container">
+    <span id="title">tweeter</span>
+    <span><b>Write</b> a tweet</span>
+  </nav>
+  <header class="currentProfile">
+    <div>
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2 class="myName">Matt Wong</h2>
+    </div>
+  </header>
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+
+    <!-- create the form for new tweets -->
+    <section class="new-tweet">
+      <h2 class="composeTweet">Compose Tweet:</h2>
+      <form method="POST" action="/tweets/">
+        <textarea class="tweetbox" name="text" placeholder="What are you humming about?"></textarea>
         <div>
-            <img src="/images/profile-hex.png">
+          <input type="submit" value="Tweet" class="tweetButton">
+          <span class="counter">140</span>
         </div>
-        <br>
-        <div>
-          <h2 class="myName">Matt Wong</h2>
-        </div>
-      </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+      </form>
+    </section>
 
-      <!-- create the form for new tweets -->
-        <section class="new-tweet">
-            <h2 class="composeTweet">Compose Tweet:</h2>
-            <form method="POST" action="/tweets/">
-              <textarea class="tweetbox" name="text" placeholder="What are you humming about?"></textarea>
-              <div>
-                <input type="submit" value="Tweet" class="tweetButton">
-                <span class="counter">140</span>
-              </div>
-            </form>
-          </section>
-    </main>
-  </body>
+    <!-- tweet container  -->
+    <section>
+
+      <!-- example tweet -->
+      <article class="tweet">
+        <header>
+          <div class="tweetUser">
+            <img src="https://i.imgur.com/73hZDYK.png">Newton</div>
+          <div class="handle">@SirIsaac</div>
+        </header>
+
+        <body class="tweetText">
+          If I have seen further it is by standing on the shoulders of giants
+        </body>
+
+        <footer>
+          <div><% setUTCSeconds(1461116232227) %> </div>
+
+          <div>
+            flag
+            retweet
+            like
+          </div>
+
+        </footer>
+
+      </article>
+
+    </section>
+
+  </main>
+</body>
+
 </html>
