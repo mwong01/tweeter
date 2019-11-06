@@ -1,3 +1,5 @@
+/* TO FIX PROPER HOVER STATE AND UTC DATE */
+
 .tweet {
   margin: 0 auto 40px;
   position: relative;
@@ -8,8 +10,12 @@
 .tweet:hover {
   color: royalblue;
   filter: blur(1px);
-  opacity: 95%;
-  box-shadow: 8px 5px 5px royalblue;
+  opacity: 80%;
+  box-shadow: 10px 5px 5px royalblue;
+}
+
+.handle:hover {
+  color: lightslategrey;
 }
 
 .tweet header {
@@ -18,7 +24,7 @@
   align-items: center;
 }
 
-.tweetUser {
+.tweet-author {
   display: flex;
   align-items: center;
 }

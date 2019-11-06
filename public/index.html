@@ -44,13 +44,13 @@
     <span id="title">tweeter</span>
     <span><b>Write</b> a tweet</span>
   </nav>
-  <header class="currentProfile">
+  <header class="current-profile">
     <div>
       <img src="/images/profile-hex.png">
     </div>
     <br>
     <div>
-      <h2 class="myName">Matt Wong</h2>
+      <h2 class="my-name">Matt Wong</h2>
     </div>
   </header>
   <!-- Page-specific (main) content here -->
@@ -58,45 +58,18 @@
 
     <!-- create the form for new tweets -->
     <section class="new-tweet">
-      <h2 class="composeTweet">Compose Tweet:</h2>
+      <h2 class="compose-tweet">Compose Tweet:</h2>
       <form method="POST" action="/tweets/">
-        <textarea class="tweetbox" name="text" placeholder="What are you humming about?"></textarea>
+        <textarea class="tweet-box" name="text" placeholder="What are you humming about?"></textarea>
         <div>
-          <input type="submit" value="Tweet" class="tweetButton">
+          <input type="submit" value="Tweet" class="tweet-button">
           <span class="counter">140</span>
         </div>
       </form>
     </section>
 
     <!-- tweet container  -->
-    <section>
-
-      <!-- example tweet -->
-      <article class="tweet">
-        <header>
-          <div class="tweetUser">
-            <img src="https://i.imgur.com/73hZDYK.png">Newton
-          </div>
-          <div class="handle">@SirIsaac
-          </div>
-        </header>
-
-        <body class="tweetText">
-          If I have seen further it is by standing on the shoulders of giants
-        </body>
-
-        <footer>
-          <div>10 days ago</div>
-
-          <div>
-            flag
-            retweet
-            like
-          </div>
-
-        </footer>
-
-      </article>
+    <section id="tweets-container">
 
     </section>
 

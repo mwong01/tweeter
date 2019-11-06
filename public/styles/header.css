@@ -1,4 +1,4 @@
-.currentProfile {
+.current-profile {
   color: #FFFFFF;
   background-color: #d4c900;
   background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
@@ -9,7 +9,7 @@
   position: relative;
  }
 
- .myName {
+ .my-name {
   margin-bottom: 0px;
   margin-top: 0px;
   color: #545149;

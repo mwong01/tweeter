@@ -11,7 +11,7 @@
 }
 
 /* compose tweet title */
-.composeTweet {
+.compose-tweet {
   text-align: left;
   position: relative;
   border-style: none;
@@ -20,7 +20,7 @@
 }
 
 /* text box to enter the tweet */
-.tweetbox {
+.tweet-box {
   text-align: left;
   margin: 0 auto;
   font-family: 'Source Sans Pro', sans-serif;
@@ -37,7 +37,7 @@
   padding: 0 0 0 0;
 }
 
-.tweetButton {
+.tweet-button {
   font-family: 'Bungee', cursive;
   color: #FFFFFF;
   background-color: #4056A1;
