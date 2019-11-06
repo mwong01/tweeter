@@ -1,0 +1,36 @@
+.tweet {
+  margin: 0 auto 40px;
+  position: relative;
+  width: 90%;
+  border: solid;
+}
+
+.tweet:hover {
+  color: royalblue;
+  filter: blur(1px);
+  opacity: 95%;
+  box-shadow: 8px 5px 5px royalblue;
+}
+
+.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweetUser {
+  display: flex;
+  align-items: center;
+}
+
+.handle {
+  text-align: right;
+}
+
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 60%;
+  font-weight: bold;
+}
