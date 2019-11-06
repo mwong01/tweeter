@@ -83,7 +83,7 @@ const createTweetElement = function (tweet) {
 
 // add document ready function 
 $(document).ready(function() {
-  renderTweets(tweetData)
+  // renderTweets(tweetData)
 
   // activate form submission button
   $(".new-tweet form").submit(function() {
@@ -93,8 +93,16 @@ $(document).ready(function() {
       type: "POST",
       data: $(this).serialize(),
       success: () => {
-        console.log("tweet submission successful")
+        loadtweets()
       }
     })
   })
+
+  // fetch tweets
+  const loadtweets = () => {
+    $.ajax("/tweets/", {method: "GET"})
+    .then(function (data) {
+      renderTweets(data)
+    }
+    )}
 });
