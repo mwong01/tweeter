@@ -84,4 +84,17 @@ const createTweetElement = function (tweet) {
 // add document ready function 
 $(document).ready(function() {
   renderTweets(tweetData)
-})
+
+  // activate form submission button
+  $(".new-tweet form").submit(function() {
+    event.preventDefault();
+    $.ajax({
+      url: "/tweets/",
+      type: "POST",
+      data: $(this).serialize(),
+      success: () => {
+        console.log("tweet submission successful")
+      }
+    })
+  })
+});
