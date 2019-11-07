@@ -6,7 +6,29 @@
    position: relative;
    z-index: 1030;
   }
-  .flex-container {
-    display: flex;
-    justify-content: space-between;
-   }
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  }
+
+.container {
+  flex-direction: column;
+}
+
+.write-tweet {
+  position: relative;
+}
+
+.down-arrow {
+  color: #d4c900;
+  position: relative;
+  text-align: center;
+}
+
+.down-arrow:hover {
+  color: red;
+}
+
+.clearfix {
+  clear:both;
+}
