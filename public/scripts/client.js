@@ -33,6 +33,9 @@ const tweetData = [
 ]
 
 const renderTweets = function (tweets) {
+  
+  $('#tweets-container').empty();
+  
   // loop through tweets
   for (let tweet of tweets) {
 
@@ -63,7 +66,7 @@ const createTweetElement = function (tweet) {
         </header>
 
         <div class="tweet-text">
-        ${tweet.content.text}
+        ${escape(tweet.content.text)}
         </div>
 
         <footer>
@@ -110,3 +113,11 @@ $(document).ready(function() {
     }
     )}
 });
+
+
+//add escape function to prevent cross-site scripting
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
