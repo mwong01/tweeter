@@ -83,11 +83,15 @@ const createTweetElement = function (tweet) {
 
 // add document ready function 
 $(document).ready(function() {
-  // renderTweets(tweetData)
+  renderTweets(tweetData)
 
   // activate form submission button
   $(".new-tweet form").submit(function() {
-    event.preventDefault();
+    event.preventDefault();   
+
+    if ($("#tweetText").val() === '' || $("#tweetText").val() === null || $("#tweetText").val().length > 140) {
+      alert("Please enter a valid tweet.")
+    } else {
     $.ajax({
       url: "/tweets/",
       type: "POST",
@@ -96,7 +100,7 @@ $(document).ready(function() {
         loadtweets()
       }
     })
-  })
+  }})
 
   // fetch tweets
   const loadtweets = () => {
