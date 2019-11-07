@@ -1,3 +1,11 @@
+/* Laptops / Desktops: minimum width of 960px */
+@media only screen and (min-width: 960px) {
+  .new-tweet {
+    width: 50%;
+    float: right;
+  }
+}
+
 .new-tweet {
   text-align: center;
   margin: 10px auto 40px;
@@ -11,13 +19,13 @@
 }
 
 /* compose tweet title */
-.compose-tweet {
+/* .compose-tweet {
   text-align: left;
   position: relative;
   border-style: none;
   margin-top: 20px;
   margin-bottom: 20px;
-}
+} */
 
 /* text box to enter the tweet */
 .tweet-box {

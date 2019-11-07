@@ -1,4 +1,33 @@
- nav {
+/* Laptops / Desktops: minimum width of 960px */
+@media only screen and (min-width: 960px) {
+  nav {
+    width: 100%;
+  }
+  .flex-container {
+    width: 100%;
+    float: left;
+  }
+
+  .down-arrow {
+    z-index: 5000;
+  }
+  
+}
+
+@media only screen and (max-width: 960px) {
+  nav {
+    background-color: #d4c900;
+    background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+  }
+
+  .flex-container {
+    background-color: #d4c900;
+    background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+    }
+}
+
+
+nav {
    color: #FFFFFF;
    background-color: #4056A1;
    height: 120px;
@@ -21,7 +50,7 @@
 }
 
 .down-arrow {
-  color: #d4c900;
+  color: #ffffff;
   position: relative;
   text-align: center;
   animation: bounce 0.8s;

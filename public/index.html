@@ -60,41 +60,46 @@
       </div>
     </div>
   </nav>
-  <header class="current-profile">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2 class="my-name">Matt Wong</h2>
-    </div>
-  </header>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
 
-    <!-- create the form for new tweets -->
-    <section id="error-msg">
-      <i class="fas fa-skull-crossbones"></i>
-      Invalid tweet, please try again.
-    </section>
-    
-    <section id="new-tweet2" class="new-tweet">
-      <h2 class="compose-tweet">Compose Tweet:</h2>
-      <form method="POST" action="/tweets/">
-        <textarea class="tweet-box" id="tweetText" name="text" placeholder="What are you humming about?"></textarea>
-        <div>
-          <input type="submit" value="Tweet" class="tweet-button">
-          <span class="counter">140</span>
-        </div>
-      </form>
-    </section>
+  <div class="parent">
+    <header class="current-profile">
+      <div>
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <h2 class="my-name">Matt Wong</h2>
+      </div>
+    </header>
 
-    <!-- tweet container  -->
-    <section id="tweets-container">
+    <!-- Page-specific (main) content here -->
+    <main class="page-content">
 
-    </section>
+      <!-- create the form for new tweets -->
+      <section id="error-msg">
+        <i class="fas fa-skull-crossbones"></i>
+        Invalid tweet, please try again.
+      </section>
+      
+      <section id="new-tweet2" class="new-tweet">
+        <!-- <h2 class="compose-tweet">Compose Tweet:</h2> -->
+        <form method="POST" action="/tweets/">
+          <textarea class="tweet-box" id="tweetText" name="text" placeholder="What are you humming about?"></textarea>
+          <div>
+            <input type="submit" value="Tweet" class="tweet-button">
+            <span class="counter">140</span>
+          </div>
+        </form>
+      </section>
 
-  </main>
+      <!-- tweet container  -->
+      <section id="tweets-container">
+
+      </section>
+
+    </main>
+  </div>
+
 </body>
 
 </html>

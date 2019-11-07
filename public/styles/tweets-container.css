@@ -1,21 +1,27 @@
-/* TO FIX PROPER HOVER STATE AND UTC DATE */
+/* Laptops / Desktops: minimum width of 960px */
+@media only screen and (min-width: 960px) {
+  .tweet {
+    width: 50%;
+    float: right;
+  }
+
+}
 
 .tweet {
   margin: 20px auto 40px;
   position: relative;
-  width: 90%;
+  width: 95%;
   border: solid;
 }
 
 .tweet:hover {
   color: royalblue;
-  filter: blur(1px);
-  opacity: 80%;
+  opacity: 70%;
   box-shadow: 10px 5px 5px royalblue;
 }
 
 .handle:hover {
-  color: lightslategrey;
+  color: grey;
 }
 
 .tweet header {
@@ -31,6 +37,11 @@
 
 .handle {
   text-align: right;
+  opacity: 0;
+}
+
+.handle:hover {
+  opacity: 0.7;
 }
 
 .tweet footer {

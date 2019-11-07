@@ -1,7 +1,36 @@
+/* Laptops / Desktops: minimum width of 960px */
+
+@media only screen and (min-width: 960px) {
+  .parent {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .page-content {
+    margin-right: 1%;
+    width: 140%;
+  }
+
+  .current-profile {
+    margin-left: 1%;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .current-profile {
+    background-color: #d4c900;
+  }
+
+}
+
 .current-profile {
   color: #FFFFFF;
   background-color: #d4c900;
-  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+  background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
   height: 400px;
   padding: 1em;
   width: 100%;
@@ -12,5 +41,5 @@
  .my-name {
   margin-bottom: 0px;
   margin-top: 0px;
-  color: #545149;
+  color: #FFFFFF;
  }
