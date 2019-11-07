@@ -73,9 +73,9 @@ const createTweetElement = function (tweet) {
           <div>${$date} days ago</div>
 
           <div>
-            flag
-            retweet
-            like
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
           </div>
 
         </footer>
