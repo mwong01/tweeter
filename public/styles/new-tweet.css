@@ -1,6 +1,6 @@
 .new-tweet {
   text-align: center;
-  margin: 0 auto 40px;
+  margin: 10px auto 40px;
   position: relative;
   width: 90%;
 }
@@ -15,8 +15,8 @@
   text-align: left;
   position: relative;
   border-style: none;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* text box to enter the tweet */
@@ -49,4 +49,22 @@
 
 .overtweeted {
   color: red;
+}
+
+#new-tweet2 {
+  display: none;
+}
+
+#error-msg {
+  display: none;
+  font-weight: bolder;
+  vertical-align: middle;
+  color: red;
+  border: red;
+  border-width: 3px;
+  border-style: solid;
+  text-align: center;
+  margin: 10px auto 40px;
+  position: relative;
+  width: 90%;
 }

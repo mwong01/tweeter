@@ -73,9 +73,9 @@ const createTweetElement = function (tweet) {
           <div>${$date} days ago</div>
 
           <div>
-          <i class="fas fa-flag"></i>
+          <i class="far fa-flag"></i>
           <i class="fas fa-retweet"></i>
-          <i class="fas fa-heart"></i>
+          <i class="far fa-heart"></i>
           </div>
 
         </footer>
@@ -88,12 +88,21 @@ const createTweetElement = function (tweet) {
 $(document).ready(function() {
   renderTweets(tweetData)
 
+  // make compose tweet hidden button with down arrow
+  $("#down").click(function(){
+    $("#new-tweet2").slideToggle("slow");
+  });
+
   // activate form submission button
   $(".new-tweet form").submit(function() {
     event.preventDefault();   
 
+    // activate error message for invalid tweets
     if ($("#tweetText").val() === '' || $("#tweetText").val() === null || $("#tweetText").val().length > 140) {
-      alert("Please enter a valid tweet.")
+      setTimeout($("#error-msg").slideDown("slow"));
+      setTimeout(function(){$("#error-msg").slideUp("slow")}, 5000);
+
+      // alert("Please enter a valid tweet.")
     } else {
     $.ajax({
       url: "/tweets/",

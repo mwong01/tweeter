@@ -39,6 +39,9 @@
   <!-- reference for flag, retweet, like, downarrow icons -->
   <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-a11y="true"></script>
 
+  <!-- slidetoggle to hide make-tweet box -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -51,7 +54,7 @@
       </div>
       <div class="clearfix">
       </div>
-      <div class="down-arrow">
+      <div id="down" class="down-arrow">
           <i class="fas fa-angle-double-down"></i>
       </div>
     </div>
@@ -69,7 +72,12 @@
   <main class="container">
 
     <!-- create the form for new tweets -->
-    <section class="new-tweet">
+    <section id="error-msg">
+      <i class="fas fa-skull-crossbones"></i>
+      Invalid tweet, please try again.
+    </section>
+    
+    <section id="new-tweet2" class="new-tweet">
       <h2 class="compose-tweet">Compose Tweet:</h2>
       <form method="POST" action="/tweets/">
         <textarea class="tweet-box" id="tweetText" name="text" placeholder="What are you humming about?"></textarea>
