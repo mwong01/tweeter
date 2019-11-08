@@ -52,6 +52,8 @@ nav {
   color: #ffffff;
   position: relative;
   text-align: center;
+
+  /* down arrow bounce feature */
   animation: bounce 0.8s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -66,6 +68,7 @@ nav {
   clear:both;
 }
 
+/* down arrow bounce feature */
 @keyframes bounce { 
   0% { transform: translateY(0); }
   100% { transform: translateY(-8px); }

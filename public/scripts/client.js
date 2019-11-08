@@ -33,9 +33,9 @@ const tweetData = [
 ]
 
 const renderTweets = function (tweets) {
-  
+
   $('#tweets-container').empty();
-  
+
   // loop through tweets
   for (let tweet of tweets) {
 
@@ -85,49 +85,52 @@ const createTweetElement = function (tweet) {
 }
 
 // add document ready function 
-$(document).ready(function() {
+$(document).ready(function () {
   // renderTweets(tweetData)
 
   // make compose tweet hidden button with down arrow
-  $("#down").click(function(){
+  $("#down").click(function () {
     $("#new-tweet2").slideToggle("slow");
   });
 
   // activate form submission button
-  $(".new-tweet form").submit(function() {
-    event.preventDefault();   
+  $(".new-tweet form").submit(function () {
+    event.preventDefault();
 
     // activate error message for invalid tweets
     if ($("#tweetText").val() === '' || $("#tweetText").val() === null || $("#tweetText").val().length > 140) {
       setTimeout($("#error-msg").slideDown("slow"));
-      setTimeout(function(){$("#error-msg").slideUp("slow")}, 5000);
+      setTimeout(function () { $("#error-msg").slideUp("slow") }, 5000);
 
       // alert("Please enter a valid tweet.")
     } else {
-    $.ajax({
-      url: "/tweets/",
-      type: "POST",
-      data: $(this).serialize(),
-      success: () => {
-        loadtweets()
-      }
-    })
-  }})
+      $.ajax({
+        url: "/tweets/",
+        type: "POST",
+        data: $(this).serialize(),
+        success: () => {
+          loadtweets()
+        }
+      })
+    }
+  })
 
   // fetch tweets
   const loadtweets = () => {
-    $.ajax("/tweets/", {method: "GET"})
-    .then(function (data) {
-      renderTweets(data)
-    }
-    )}
+    $.ajax("/tweets/", { method: "GET" })
+      .then(function (data) {
+        renderTweets(data)
+      }
+      )
+  }
 
-    loadtweets();
+  loadtweets();
+  $("#tweetText").val("");
 });
 
 
 //add escape function to prevent cross-site scripting
-const escape =  function(str) {
+const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
