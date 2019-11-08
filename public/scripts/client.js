@@ -109,7 +109,17 @@ $(document).ready(function () {
         type: "POST",
         data: $(this).serialize(),
         success: () => {
-          loadtweets()
+          loadtweets();
+          $("#tweetText").val("");
+
+          // reset char counter after entering a tweet
+          // create stored variable to determine # chars left
+          let $charInTweet = $(this).val();
+          let $charRemain = 140 - $charInTweet.length;
+
+          // traverse up and down the DOM to get character count
+          let $counter = $(this).closest("form").find(".counter");
+          $counter.text($charRemain);
         }
       })
     }
@@ -125,7 +135,6 @@ $(document).ready(function () {
   }
 
   loadtweets();
-  $("#tweetText").val("");
 });
 
 
