@@ -3,18 +3,14 @@
 Tweeter is a simple, single-page Twitter clone, leveraging HTML, CSS, JS, jQuery and AJAX front-end skills, and Node, Express and MongoDB back-end skills.
 
 ## Screenshots - Desktop
-
 !["Tweeter main page - desktop view"](https://github.com/mwong01/tweeter/blob/master/docs/desktop-main-screen.png)
-<br>
 !["Tweeter new tweet - desktop view"](https://github.com/mwong01/tweeter/blob/master/docs/desktop-new-tweet.png)
 
 ## Screenshots - iPad
-
 !["Tweeter main page - iPad view"](https://github.com/mwong01/tweeter/blob/master/docs/ipad-new-tweet.png)
 
 ## Screenshots - iPhone X
 !["Tweeter main page - iPhone X view"](https://github.com/mwong01/tweeter/blob/master/docs/iphone-x-new-tweet.png)
-
 
 ## Getting Started
 
