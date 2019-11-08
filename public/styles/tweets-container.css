@@ -4,7 +4,6 @@
     width: 50%;
     float: right;
   }
-
 }
 
 .tweet {
@@ -20,6 +19,7 @@
   box-shadow: 10px 5px 5px royalblue;
 }
 
+/* make user's twitter handle hidden until user mouses over */
 .handle:hover {
   color: grey;
 }
@@ -39,7 +39,6 @@
   text-align: right;
   opacity: 0;
 }
-
 
 .handle:hover {
   opacity: 0.7;

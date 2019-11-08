@@ -10,12 +10,12 @@
   }
 
   .page-content {
-    margin-right: 1%;
-    width: 140%;
+    margin-right: 2%;
+    width: 150%;
   }
 
   .current-profile {
-    margin-left: 1%;
+    margin-left: 2%;
     text-align: center;
     position: sticky;
     top: 20px;
