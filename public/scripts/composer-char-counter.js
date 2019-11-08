@@ -1,6 +1,6 @@
-$(document).ready(function() {
-  $(".new-tweet").on("keydown keyup","textarea", function() {
-    
+$(document).ready(function () {
+  $(".new-tweet").on("keydown keyup", "textarea", function () {
+
     // create stored variable to determine # chars left
     let $charInTweet = $(this).val();
     let $charRemain = 140 - $charInTweet.length;
