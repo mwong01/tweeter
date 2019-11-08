@@ -72,7 +72,7 @@ const createTweetElement = function (tweet) {
         <footer>
           <div>${$date} days ago</div>
 
-          <div>
+          <div class="tweet-icons">
           <i class="far fa-flag"></i>
           <i class="fas fa-retweet"></i>
           <i class="far fa-heart"></i>

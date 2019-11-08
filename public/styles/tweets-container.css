@@ -22,7 +22,14 @@
 /* make user's twitter handle hidden until user mouses over */
 .handle:hover {
   color: grey;
+  opacity: 0.7;
 }
+
+.handle {
+  text-align: right;
+  opacity: 0;
+}
+
 
 .tweet header {
   display: flex;
@@ -33,15 +40,6 @@
 .tweet-author {
   display: flex;
   align-items: center;
-}
-
-.handle {
-  text-align: right;
-  opacity: 0;
-}
-
-.handle:hover {
-  opacity: 0.7;
 }
 
 .tweet footer {

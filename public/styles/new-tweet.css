@@ -70,3 +70,13 @@
   position: relative;
   width: 95%;
 }
+
+/* make tweet icons fade */
+.tweet-icons:hover {
+  color: grey;
+  opacity: 0.7;
+}
+
+.tweet-icons {
+  opacity: 0;
+}
