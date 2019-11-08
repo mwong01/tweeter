@@ -30,9 +30,9 @@ const tweetData = [
     },
     "created_at": 1461113959088
   }
-]
+];
 
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
 
   $('#tweets-container').empty();
 
@@ -45,9 +45,9 @@ const renderTweets = function (tweets) {
     // takes return value and appends it to the tweets container
     $('#tweets-container').prepend($tweet);
   }
-}
+};
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   let $date = Math.floor((Date.now() - tweet.created_at) / 86400000);
 
   let $tweet = (
@@ -82,25 +82,29 @@ const createTweetElement = function (tweet) {
 
       </article>`);
   return $tweet;
-}
+};
 
-// add document ready function 
-$(document).ready(function () {
+// add document ready function
+$(document).ready(function() {
   // renderTweets(tweetData)
 
   // make compose tweet hidden button with down arrow
-  $("#down").click(function () {
+  $("#down").click(function() {
     $("#new-tweet2").slideToggle("slow");
   });
 
   // activate form submission button
-  $(".new-tweet form").submit(function () {
+  $(".new-tweet form").submit(function() {
     event.preventDefault();
 
     // activate error message for invalid tweets
     if ($("#tweetText").val() === '' || $("#tweetText").val() === null || $("#tweetText").val().length > 140) {
-      setTimeout($("#error-msg").slideDown("slow"));
-      setTimeout(function () { $("#error-msg").slideUp("slow") }, 5000);
+      setTimeout(function() {
+        $("#error-msg").slideDown("slow");
+      });
+      setTimeout(function() {
+        $("#error-msg").slideUp("slow");
+      }, 5000);
 
       // alert("Please enter a valid tweet.")
     } else {
@@ -121,26 +125,26 @@ $(document).ready(function () {
           let $counter = $(this).closest("form").find(".counter");
           $counter.text($charRemain);
         }
-      })
+      });
     }
-  })
+  });
 
   // fetch tweets
   const loadtweets = () => {
     $.ajax("/tweets/", { method: "GET" })
-      .then(function (data) {
-        renderTweets(data)
+      .then(function(data) {
+        renderTweets(data);
       }
-      )
-  }
+      );
+  };
 
   loadtweets();
 });
 
 
 //add escape function to prevent cross-site scripting
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
