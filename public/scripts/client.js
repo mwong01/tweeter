@@ -86,7 +86,7 @@ const createTweetElement = function (tweet) {
 
 // add document ready function 
 $(document).ready(function() {
-  renderTweets(tweetData)
+  // renderTweets(tweetData)
 
   // make compose tweet hidden button with down arrow
   $("#down").click(function(){
@@ -121,6 +121,8 @@ $(document).ready(function() {
       renderTweets(data)
     }
     )}
+
+    loadtweets();
 });
 
 

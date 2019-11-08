@@ -8,9 +8,9 @@
 
 .new-tweet {
   text-align: center;
-  margin: 10px auto 40px;
+  margin: 20px auto 40px;
   position: relative;
-  width: 90%;
+  width: 95%;
 }
 
 .new-tweet form > div {
@@ -43,6 +43,8 @@
   border-left: none;
   border-right: none;
   padding: 0 0 0 0;
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 .tweet-button {
@@ -69,10 +71,9 @@
   vertical-align: middle;
   color: red;
   border: red;
-  border-width: 3px;
   border-style: solid;
   text-align: center;
-  margin: 10px auto 40px;
+  margin: 20px auto 40px;
   position: relative;
-  width: 90%;
+  width: 95%;
 }
